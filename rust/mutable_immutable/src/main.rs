@@ -13,11 +13,27 @@ fn main() {
     // y = 6;
     // println!("{}", y);
 
-    println!("System size: {}", usize::BITS); // System size: 64
-    println!("Memory address of const is: {:p}", &_MAX_POINTS); // Memory address of const is: 0xaaaaabb2d014
+    // println!("System size: {}", usize::BITS); // System size: 64
+    // println!("Memory address of const is: {:p}", &_MAX_POINTS); // Memory address of const is: 0xaaaaabb2d014
 
-    let integer1: i64 = 1;
-    let integer2: i64 = 2;
-    println!("Stack address of integer1 is: {:p}", &integer1);
-    println!("Stack address of integer2 is: {:p}", &integer2);
+    // let integer1: i64 = 1;
+    // let integer2: i64 = 2;
+    // println!("Stack address of integer1 is: {:p}", &integer1);
+    // println!("Stack address of integer2 is: {:p}", &integer2);
+
+    let y = 5;
+    println!("Stack address of y is: {:p}", &y);
+
+    let y = y + 1;
+    println!("Stack address of y is: {:p}", &y);
+
+    let y = y * 2;    
+    println!("Stack address of y is: {:p}", &y);
+
+    println!("The value of y is: {}", y);
+    {
+        let y = 0;
+        println!("The value of y is: {}", y);
+    }
+    println!("The value of y is: {}", y);
 }
