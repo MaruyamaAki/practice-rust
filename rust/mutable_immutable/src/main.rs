@@ -21,19 +21,31 @@ fn main() {
     // println!("Stack address of integer1 is: {:p}", &integer1);
     // println!("Stack address of integer2 is: {:p}", &integer2);
 
-    let y = 5;
-    println!("Stack address of y is: {:p}", &y);
+    // let y = 5;
+    // println!("Stack address of y is: {:p}", &y);
 
-    let y = y + 1;
-    println!("Stack address of y is: {:p}", &y);
+    // let y = y + 1;
+    // println!("Stack address of y is: {:p}", &y);
 
-    let y = y * 2;    
-    println!("Stack address of y is: {:p}", &y);
+    // let y = y * 2;    
+    // println!("Stack address of y is: {:p}", &y);
 
-    println!("The value of y is: {}", y);
-    {
-        let y = 0;
-        println!("The value of y is: {}", y);
-    }
-    println!("The value of y is: {}", y);
+    // println!("The value of y is: {}", y);
+    // {
+    //     let y = 0;
+    //     println!("The value of y is: {}", y);
+    // }
+    // println!("The value of y is: {}", y);
+
+    let touple1 = (500, 6.4, "dummy");
+    let (_x, _y, _z) = touple1;
+    println!("The value of touple1 is: {}, {}, {}", touple1.0, touple1.1, touple1.2);
+
+    let mut touple2 = ((0, 1), (2, 3));
+    let ((ref mut x1_ptr, ref mut y1_ptr), _) = touple2;
+
+    *x1_ptr = 5;
+    *y1_ptr = -5;
+
+    println!("{:?}", touple2);
 }
