@@ -37,15 +37,22 @@ fn main() {
     // }
     // println!("The value of y is: {}", y);
 
-    let touple1 = (500, 6.4, "dummy");
-    let (_x, _y, _z) = touple1;
-    println!("The value of touple1 is: {}, {}, {}", touple1.0, touple1.1, touple1.2);
+    // let touple1 = (500, 6.4, "dummy");
+    // let (_x, _y, _z) = touple1;
+    // println!("The value of touple1 is: {}, {}, {}", touple1.0, touple1.1, touple1.2);
 
-    let mut touple2 = ((0, 1), (2, 3));
-    let ((ref mut x1_ptr, ref mut y1_ptr), _) = touple2;
+    // let mut touple2 = ((0, 1), (2, 3));
+    // let ((ref mut x1_ptr, ref mut y1_ptr), _) = touple2;
 
-    *x1_ptr = 5;
-    *y1_ptr = -5;
+    // *x1_ptr = 5;
+    // *y1_ptr = -5;
 
-    println!("{:?}", touple2);
+    // println!("{:?}", touple2);
+
+    let array1 = [1, 2, 3, 4, 5]; // [i32: 5]
+    let array2 = [0; 10]; // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+    println!("{:?} {:?} {} {}", array1, array2, array1[2], array1[3]);
+
+
 }
